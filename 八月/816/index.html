@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script src="./script.js"></script> -->
+    <!-- <script src="./script1.js"></script> -->
+    <!-- <script src="./script2.js"></script> -->
+    <script>
+        function run(fn, b){
+            fn();
+        }
+        function beRun(){
+            console.log('beRun');
+        }
+        run(beRun, 2);
+        // 函数是一等公民，可以到处传递
+        // 上面的例子，是把函数当作另一个函数的参数传进去了
+
+        function f(){
+            let v1 = 1;
+            let count = 0;
+            function f2(){
+                console.log(count);
+                count = count + 1;
+                // console.log(v1);
+                // console.log('f2');
+            }
+            return f2;
+        }
+        let ff = f();
+        ff();
+        ff();
+        ff();
+        ff();
+        ff();
+
+        // console.log(v1);
+        // 这个东西，就是很多人都搞不懂的，闭包，closure
+        // 这种作用域的规则，叫做词法作用域
+        // 如果是根据函数调用的位置来决定它的作用域的话，那就叫做动态作用域
+        // 动态作用域是一种相对比较落后的方式，现在大多数编程语言都不使用了
+        // 但是，在JavaScript当中，还是有的
+        // 那就是this的指向
+        // 词法作用域：根据代码书写的位置来确定作用域的
+        // 动态作用域：根据代码执行的位置来确定作用域的
+
+        // 由于函数是一等公民，可以到处传递
+        // 并且，由于词法作用域的存在
+        // 这两点的结合，导致了闭包的出现
+
+        // 闭包，给函数增加了状态
+        // 函数原本是无状态的
+        // 有了状态的函数，就好像有了方法的对象
+        // 由此，就有了两大编程范式，面向对象编程和函数式编程
+
+        // f()();
+
+
+        function test(){
+            return 1;
+        }
+        test();
+        test
+    </script>
+</body>
+</html>

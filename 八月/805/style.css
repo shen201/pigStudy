@@ -1,0 +1,29 @@
+body{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh; */
+}
+.box{
+    width: 500px; 
+    height: 400px;
+    background-color: gray;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+}
+.content{
+    width: 488px;
+    height: 350px;
+    background-color: white;
+    margin: 8px;
+}

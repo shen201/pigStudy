@@ -1,0 +1,11 @@
+span{
+    color:red;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+.box{
+    background-color: sandybrown;
+    width: 100px;
+    height: 100px;
+}

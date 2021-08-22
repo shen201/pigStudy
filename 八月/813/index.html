@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span id="span"></span>
+    <script>
+        function fn1(){
+            function fn2(){
+                
+            }
+            return fn2;
+        }
+        let a = fn1();
+        // 函数是一等公民
+        // 也就是说，函数就和其他的值一样
+        // 可以像字符串、数组等一样，到处传递
+
+        // 什么是值
+        // 比如说，1是一个值，它是一个数字
+        // '1'也是一个值，它是一个字符串
+        // 我们学过数据类型，这些类型都是值的类型
+        // 比如：数字、字符串、布尔值、null、undefined、对象
+
+        // 值，都是可以传递的
+        // 比如：let a = 1;
+        // 就是把1这个值，传递给了a这个变量
+        // 变量a就像是一个盒子，里面装着1这个值
+        // let b = a;
+
+        // function fn(){
+        //     console.log('fn');
+        // };
+        // let fnn = fn;
+        // console.log(fnn);
+        // console.log(fn);
+        // fn = 1;
+        // console.log(fn);
+
+        // 声明一个函数，实际上就是创建了一个变量，值为一个函数
+        function fn(z){
+            // console.log(arguments);
+            console.log(arguments[0]);
+            console.log(arguments[1]);
+            console.log(arguments[2]);
+            // console.log('fn');
+            if(1 > 2){
+                return 1;
+            }else{
+                return 2;
+            }
+            console.log('after return');
+        }
+        // 函数调用就是在函数后面加一个括号
+        (function test(){
+            // console.log('anymous');
+        })()
+        // console.log(fn());
+        // 函数有输入和输出
+        // 函数的输入，就是在调用的时候，也就是在调用时那个括号里面，写要输入的值
+        // 多个值用逗号隔开
+        // 函数的输出，就是在函数的定义里面，有一个return语句
+        // 在return语句后面的值，就是函数的输出值
+        // return语句会结束函数的执行
+        // 也就是说，在return语句执行之后，后面的语句就不再执行了
+        // 不是说写在return后面的语句就不执行了
+        // 而是要看return语句有没有执行，如果执行了，后面的语句就不执行
+        // 一个函数是可以有多个return的，但是，只能有一个被执行
+        // return语句也是可以省略的，也就是函数定义中，可以没有return
+        // 这个时候，这个函数依然会有返回值，它的返回值是undefined
+        // 总结下来说，函数的返回值由执行的那个return语句决定
+        // 如果没有return，就返回undefined
+
+        // fn(1, 2, 3);
+
+
+        // fn(1, 2);
+        // fn();
+        function pow(base, mi){
+            // console.log(base);
+            // let base = arguments[0];
+            // let mi = arguments[1];
+            // let x = arguments[2];
+            return Math.pow(base, mi);
+        }
+        pow(2);
+
+
+        function run(){
+            let fn = arguments[0];
+            fn();
+            return fn;
+        }
+        function fn3(){
+            console.log('fn3');
+        }
+        fn3();
+        let fn4 = run(fn3);
+        console.log(fn4());
+
+        function func(){
+            let bianliang1 = arguments[0];
+            return bianliang1;
+        }
+        let aa = 1;
+        let result = func(aa);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+.item{
+    width: 30%;
+    height: 200px;
+    background-color: lightgreen;
+}
+.box{
+    height: 200px;
+    width: 100%;
+    background-color: lightgrey;
+    margin-bottom: 8px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.bottom{
+    display: flex;
+}
+.bottom .left{
+    width: 30%;
+    margin-right: 5%;
+}
+.bottom .right{
+    flex-grow: 1;
+    height: calc(200px + 200px + 8px);
+    background-color: lightpink;
+}

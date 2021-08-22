@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布局</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .fixed {
+            position: fixed;
+        }
+        .display{
+            display: block;
+            /* 块级元素：
+            两个特点：
+            1. 独占一行
+            2. 可以声明宽高 */
+            display: inline;
+            /* 内联元素：
+            1. 不会独占一行
+            2. 不能声明宽高 */
+            display: inline-block;
+            /* 
+            内联块级元素；
+            1. 不会独占一行
+            2. 可以声明宽高 */
+            display: flex;
+            /* 弹性盒子
+            应该写在容器元素上，也就是父元素上 */
+            justify-content: flex-start;
+            /* 默认值，从左向右排，更准确地讲，是沿着轴正向排列 */
+            justify-content: flex-end;
+            /* 沿着轴反向排列 */
+            justify-content: center;
+            /* 在轴中部排列 */
+            justify-content: space-between;
+            /* 沿着轴两端均匀排列，且贴近两端 */
+            justify-content: space-around;
+            /* 沿着轴均匀排列，每个内容块周围空间距离相等 */
+            align-items: flex-start;
+            /* 默认值，控制内容元素沿着轴的对齐方式，沿着轴顶部对齐 */
+            align-items: center;
+            /* 默认值，控制内容元素沿着轴的对齐方式，沿着轴中间对齐 */
+            align-items: flex-end;
+            /* 默认值，控制内容元素沿着轴的对齐方式，沿着轴底部对齐 */
+            flex-direction: column;
+        }
+        .red{
+            background-color: white;
+            width: 120px;
+            height: 120px;
+            border: 2px solid;
+        }
+        .blue{
+            background-color: chocolate;
+            width: 88px;
+            height: 88px;
+            border: 1px solid;
+        }
+
+        .position{
+            position: relative;
+            position: absolute;
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    布局，讲的就是元素与元素之间的空间关系（位置、层级）
+    <span style="background-color: red; width: 200px; height: 200px; display: block;margin: 100px;">I love my cat.</span>
+    <div style="background-color: red; width: 200px; height: 200px;">
+        i am a span
+    </div>
+
+    <ul>
+        <li>Buy cat food</li>
+        <li>Exercise</li>
+        <li>Cheer up friend</li>
+    </ul>
+
+    <p>The end!</p>
+    <div>
+        <div style="background-color: blue; width: 100px; height: 100px; display: inline-block;">
+            000
+        </div>
+        <div style="background-color: blue; width: 100px; height: 100px;">
+            aaa
+        </div>
+    </div>
+    <div style="background-color: blue; width: 100px; height: 100px; display: inline-block;">
+        000
+    </div>
+    <span>112</span>
+
+    <div style="display: flex; justify-content: space-around;">
+        <div class="blue">1</div>
+        <div class="blue">2</div>
+        <div class="blue">5</div>
+        <div class="blue">5</div>
+        <div class="blue">5</div>
+    </div>
+
+    <div class="blue">1</div>
+    <div class="blue" style="position: absolute; top: 0; left: 50px;">
+        <div style="position: absolute; left: 10px;" class="red" >
+
+        </div>
+    </div>
+    <div style="position: relative;">
+        <div class="red" style="position: absolute; left: 65px;top: 10px;"></div>
+        <div class="red" style="position: absolute;top: 140px;"></div>
+        <div class="red" style="position: absolute;top: 140px;left: 130px;"></div>
+    </div>
+    <div class="blue" style="position: fixed; right: 0; bottom: 0;">55</div>
+</body>
+
+</html>

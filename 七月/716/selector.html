@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #id{
+            /* #是id选择器 */
+            color:red
+        }
+        .class{
+            /* .是类选择器 */
+            color: green;
+        }
+        h1{
+            /* 标签选择器 */
+            color: red;
+        }
+        *{
+            /* *一个星号是通配选择器  */
+            color: rgb(45, 160, 60);
+        }
+        /* .father p{
+            color: tomato;
+        } */
+        .father>p{
+            /* 第一代后代选择器 */
+            color: steelblue;
+        }
+        .father p{
+            /* 所有p类后代选择器 */
+            color: tomato;
+        }
+        .father *{
+            /* 除上面p类以外的所有后代选择器 */
+            color: blue;
+        }
+        /* !important > 行内样式 > ID选择器 > 类选择器 > 标签 > 通配符 > 继承 > 浏览器默认属性 */
+        /* 同一级别中后写的会覆盖先写的样式 */
+    </style> 
+</head>
+<body>
+    body
+    <div style="color: tomato;">div</div>
+    <div id="id">
+        <!-- 标签内部的内容才是属于该标签样式控制的范围 -->
+        id
+    </div>
+    <div class="class">
+        class
+    </div>
+    <div>
+        <h1>1</h1>
+    </div>
+    <div>
+        *1
+    </div>
+    <div class="father">
+        <p>
+            1
+            <p>2</p>
+            <p>2</p>
+        </p>
+        <span>span</span>
+        <h2>h2</h2>
+        <p>p</p>
+    </div>
+</body>
+</html>

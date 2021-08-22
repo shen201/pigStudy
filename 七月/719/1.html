@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        div {
+            display: inline-block;
+            background-color: red;
+            width: 800px;
+            height: 100px;
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+
+        #header {
+            display: flex;
+            align-items: center;
+            /* justify-content: space-around; */
+            justify-content: space-between;
+            /* padding-left: 20px; */
+            width: 100%;
+        }
+
+        /* #box-1 {
+            background-color: white;
+            border: black solid 1px;
+            width: 100px;
+            height: 60px;
+
+
+        }
+
+        #box-2 {
+            background-color: white;
+            border: black solid 1px;
+            width: 300px;
+            height: 60px;
+            flex-direction: row;
+            display: flex;
+            align-items: center;
+        }
+
+        #box-3 {
+            background-color: white;
+            border: black solid 1px;
+            width: 140px;
+            height: 60px;
+        } */
+
+        .side-bar {
+            position: absolute;
+            background-color: green;
+            width: 155px;
+            height: calc(100% - 100px);
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+
+        span {
+            margin: 0;
+            border: 1px solid black;
+            display: block;
+            width: 150px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+
+        p {
+            display: inline-block;
+            background-color: transparent;
+            border: transparent;
+            width: 608px;
+            height: 250px;
+            margin: 20px;
+            margin-top: 200px;
+            margin-left: 200px;
+
+        }
+
+        #k {
+            display: flex;
+            width: 100px;
+            height: 180px;
+            border: black solid 1px;
+            margin-left: 700px;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background-color: white;
+            border: black solid 1px;
+            width: 140px;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="box center">logo</div>
+        <div class="box center">
+            <span>首页</span>
+            <span>新闻</span>
+            <span>文章</span>
+        </div>
+        <div class="box center">用户</div>
+    </div>
+    <div class="side-bar">
+        <span>国内新闻</span>
+        <span>国际新闻</span>
+        <span>本地新闻</span>
+    </div>
+    <p class="content">
+        <h1>新闻标题</h1>
+        <span>小猪猪 2021-7-19</span>
+        <p>
+            新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻
+            新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻-
+            新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻
+            新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻
+            新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻
+            新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻
+            新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻
+            新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻
+        </p>
+    </p>
+    <div id="k" class="center">
+        固定广告
+
+    </div>
+</body>
+
+</html>

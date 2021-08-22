@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        div{
+            width: 100px;
+            height: 50px;
+            /* 
+                width, height默认是用来声明内容区content的宽高
+                并且，只对display值为block的元素有效
+            */
+            background-color: red;
+            /* background：控制了除了margin以外所有的颜色 */
+            margin: 10px;
+            /* margin是外边距
+                外边距的意思就是：
+                你离我远点，至少离我这么多距离
+            */
+            padding: 20px;
+            /* padding：内边距
+                边框距离内容区域的距离
+            */
+            border: 10px solid;
+            /* 
+                border：边框
+                不设置颜色的时候，默认是黑色，所以会覆盖掉background
+            */
+        }
+        #id{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            padding: 30px;
+            box-sizing: border-box;
+            /* 
+                box-sizing值为border-box时，表示width、height声明的是border盒子的大小
+            */
+        }
+    </style>
+</head>
+<body>
+    <div>fdsfsdf</div>
+    <div id="id">sdfsfd</div>
+</body>
+</html>

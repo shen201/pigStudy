@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <img src="https://tse1-mm.cn.bing.net/th/id/R-C.c6c03edea530e9caa677c9d17f193a4d?rik=MBgpsjumbTD5eQ&riu=http%3a%2f%2fwww.desktx.com%2fd%2ffile%2fwallpaper%2fscenery%2f20170209%2fca186d97701674b996264b2d352894a7.jpg&ehk=HunG%2fPF7pUbpcS34cWpNvlS%2faoDPbcaTYL6LFFPQIIM%3d&risl=&pid=ImgRaw&r=0" alt=""> -->
+        {{x + 1}}
+        <!-- 双花括号，也叫做胡子语法 -->
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        let a = new Vue({
+            el:"#app",
+            // el element
+            data: {
+                x: "123"
+            },
+            created(){
+                setTimeout(() => {
+                    this.x = 159654;
+                }, 1000);
+            }
+        });
+    </script>
+    <!-- <script src="./index.js"></script> -->
+    <!-- <script src="./index1.js"></script> -->
+    <!-- <script src="./index2.js"></script> -->
+
+</body>
+</html>

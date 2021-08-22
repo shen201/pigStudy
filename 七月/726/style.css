@@ -1,0 +1,23 @@
+body{
+    background-color: lightgreen;
+}
+.wrapper{
+    margin: 0;
+    /* background-color: lightblue; */
+}
+span{
+    display: block;
+    position: relative;
+    /* background-color: lightpink; */
+}
+span:before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: lightcoral;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+}  
